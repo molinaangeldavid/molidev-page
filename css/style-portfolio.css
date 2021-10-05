@@ -1,0 +1,92 @@
+:root{
+    --blanco: #fff;
+    /* --color-nav: rgba(0, 97, 57,1); */
+}
+
+body{
+    width: 80%;
+    margin: auto;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url(/images/laptop-background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    position: sticky;
+    margin-bottom: 1px;
+    margin-bottom: 200px;
+}
+
+nav.navigator{
+    margin: 0px;
+    /* background-color: var(--color-nav); */
+    justify-content: center;
+    align-items: center;
+}
+
+.direccion-logo{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-page img{
+    width: 20%;
+    margin: 40px 0px 20px;  
+}
+
+ul{
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    transition: border 2s ease;
+}
+
+li{
+    list-style: none; 
+    margin: 20px 0px 40px 0px;
+}
+
+.menu-flex a{
+    border: 2px solid var(--blanco);
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-family: serif;
+    font-weight: 600;
+    text-decoration:none;
+    transition: border 0.6s ease;
+    padding: 1vw;
+
+}
+
+.menu-flex a:hover{
+    border: 2px solid rgba(44, 35, 35);
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    /* Aqui va todo los cambios a una pantalla de laptop */
+}
+@media only screen and (min-width: 600px){
+    /* Aqui va todo los cambios en una pantalla de celular */
+}
+
+main{
+    height: 800px;
+    margin-top: 25px;
+    font-family: 'lora',sans-serif;
+    color: var(--blanco);
+    font-size: 1.4vw;
+}
+
+h1{
+    text-align: center;
+    font-weight: 800;
+}
+
+main section img{
+    margin: 20px;
+    display: inline-block;
+    width: 20%;
+    height: auto;
+}
