@@ -1,0 +1,8 @@
+section.encabezado-historia{
+    background-color: azure;
+    display: grid;
+}
+.encabezado-historia .imagen-retrato a{
+    width: 20%;
+    height: auto;
+}
