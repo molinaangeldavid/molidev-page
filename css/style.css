@@ -6,11 +6,18 @@
     --font-primary: 'Lora', serif;
     --font-other: 'Noto Sans Mono', monospace;
 }
-
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+}
+a:visited, a:link{
+    color: #9705aa;
+    text-decoration: none;
+    font-weight: 500;
+}
 body{
     color: var(--negro);
     font-family: var(--font-primary);
-    width: 100%;
     margin: auto;
     padding: 0px;
     box-sizing: border-box;
@@ -202,8 +209,10 @@ article.frase-main{
     color: var(--negro);
 }
 
-section.python-language{
-    background-color: var(--negro);
+section#python-language-container{
+    width: 100%;
+    color: var(--negro);
+    font-size: 0.9vw;
 }
 
 

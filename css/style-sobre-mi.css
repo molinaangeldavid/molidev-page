@@ -1,4 +1,9 @@
-.sobre-mi-container-main{
+#sobre-mi-container-main{
     width: 100%;
-    background-color: var(--negro);
+    display: grid;
+    grid-template-rows: 1fr ;
+}
+#retrato-molina{
+    width: 15vw;
+    border-radius: 50%;
 }
