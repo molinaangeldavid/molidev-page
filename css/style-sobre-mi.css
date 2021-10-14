@@ -1,8 +1,4 @@
-section.encabezado-historia{
-    background-color: azure;
-    display: grid;
-}
-.encabezado-historia .imagen-retrato a{
-    width: 20%;
-    height: auto;
+.sobre-mi-container-main{
+    width: 100%;
+    background-color: var(--negro);
 }

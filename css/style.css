@@ -8,15 +8,17 @@
 }
 
 body{
+    color: var(--negro);
     font-family: var(--font-primary);
-    width: 80%;
+    width: 100%;
     margin: auto;
     padding: 0px;
     box-sizing: border-box;
     background-color: var(--blanco);
 }
-
+/* Estilos header */
 header{
+    
     margin: auto;
     position: sticky;
     padding-bottom: 10px;
@@ -40,7 +42,7 @@ nav.navigator{
     margin: 30px 0px 15px;  
 }
 
-ul{
+ul.menu-flex{
     display: flex;
     justify-content: space-around;
     transition: border 2s ease;
@@ -63,8 +65,10 @@ ul{
     border: 2px solid var(--hover-nav);
     cursor: pointer;
 }
-
+/* Estilos main */
 main{
+    width: 80%;
+    margin: auto;
     font-family: var(--font-primary);
     color: var(--blanco);
     font-size: 1.4vw;
@@ -72,12 +76,14 @@ main{
 }
 
 h1{
+    padding: 10px 0px;
     text-align: center;
     font-weight: 800;
-    color: #e7e7e7;
+    color: var(--blanco);
     text-transform: uppercase;
     font-family: var(--font-other);
     font-size: 2vw;
+    text-decoration: dashed;
 }
 
 
@@ -88,9 +94,27 @@ h1{
 
 .introdution-main{
     background-image: url(/images/imagen-header3.png);
-    background-position: 20%;
-    background-position-x: 30%;
-    margin-bottom: 2vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 40px 0px;
+}
+
+article.frase-main{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 40px;
+}
+
+.frase-1,.frase-2{
+    width: 50%;
+}
+.frase-main h2, .frase-main h3{
+    text-shadow: 1px 1px 30px #A2D2FF;
+    color: var(--blanco);
+}
+.frase-main h3{
+    align-self: flex-end;
 }
 
 #language-1{grid-area:language1;}
@@ -107,12 +131,14 @@ h1{
 #language-12{grid-area:language12;}
 
 #language-1 img,#language-2 img,#language-3 img,#language-4 img, #language-5 img, #language-6 img{
-    width: 30px;
-    padding-right: 15px;
+    width: 2.5vw;
+    height: auto;
+    padding-right: 8px;
 }
 #language-7 img, #language-8 img, #language-9 img, #language-10 img, #language-11 img, #language-12 img{
-    width: 30px;
-    padding-right: 15px;
+    width: 2.5vw;
+    height: auto;
+    padding-right: 8px;
 }
 
 .grid-container-language{
@@ -122,16 +148,16 @@ h1{
     'language4 language4 language5 language5 language6 language6'
     'language7 language7 language8 language8 language9 language9'
     'language10 language10 language11 language11 language12 language12';
-    gap: 20px;
     margin: 0 10px;
+    grid-column-gap: 10px;
 }
 
 .grid-language{
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
     border-radius: 20px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .grid-language a{
@@ -139,7 +165,6 @@ h1{
     text-decoration: none;
     color: var(--negro);
     width: 100%;
-    height: 100%;
     border: 3px solid rgb(5, 5, 5);
     transition: border 0.6s ease;
     font-family: var(--font-other);
@@ -150,13 +175,65 @@ h1{
     border: 3px solid #0077a7;
 }
 
-article.frase-main{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    padding-left: 40px;
+.introduccion-container{
+    font-family: var(--font-primary);
+    width: 100%;
+    margin: auto;
+}
+.introduccion-container p{
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5vw;
+    color: var(--color-dark);
+
+}
+.introduccion-container .intro-inspiracion{
+    font-weight: 500;
+    font-style: italic;
+    text-align: left;
+    font-size: 2vw;
+    border: 5px solid var(--negro);
+    padding: 20px;
 }
 
-.frase-main h3{
-    align-self: flex-end;
+.intro-inspiracion span { 
+    font-weight: 800;
+    color: var(--negro);
+}
+
+section.python-language{
+    background-color: var(--negro);
+}
+
+
+/* Estilos footer */
+.footer-container{
+    width: 100%;
+    height: 8vw;
+    margin-top: 50px;
+    background-color: #A2D2FF;
+}
+.sub-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-container .derechos-container{
+    display: inherit;
+}
+.footer-container span{
+    color: var(--negro);
+    font-size: 1.2vw;
+    font-family: var(--font-primary);
+    padding-top: 15px;
+}
+.footer-container a, .footer-container li{
+    text-decoration: none;
+    list-style-type: none;
+}
+.footer-container svg{
+    width: 2vw;
+    padding: 0 10px;
 }
