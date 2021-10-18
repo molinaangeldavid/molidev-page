@@ -1,11 +1,33 @@
 #sobre-mi-container-main{
-    width: 90%;
+    width: 85%;
     display: grid;
     font-family: 'Noto Sans Mono', monospace;
     font-weight: 200;
 }
 
+#retrato-molina-container{grid-area: 'image';}
+#presentation-personal{grid-area: 'presentation';}
+
+.grid-container-main{
+    display: grid;
+    grid-template-areas:
+    'image presentation';
+    gap: 10px;
+    align-content: center;
+}
+
 #retrato-molina{
-    width: 18vw;
+    width: 200px;
     border-radius: 50%;
 }
+@media only screen and (max-width: 600px){
+    .grid-container-main{
+        grid-template-areas: 
+        'image'
+        'presentation';
+    }
+    #retrato-molina-container{
+        display: flex;
+        justify-self: center
+    }
+};

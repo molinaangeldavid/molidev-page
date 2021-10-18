@@ -140,7 +140,7 @@ main img{
     width: 500px;
 }
 h1{
-    text-shadow: 1px 1px 15px #0547aa;
+    text-shadow: 1px 1px 15px #ffffff;
     text-align: center;
     padding: 10px 0px;
     font-weight: 800;
@@ -148,6 +148,7 @@ h1{
     font-family: var(--font-primary);
     font-size: 30px;
     text-decoration: dashed;
+    color: var(--negro);
 }
 
 
@@ -162,6 +163,7 @@ h1{
     background-attachment: fixed;
     background-size: cover;
     margin: 20px 0px;
+    padding: 40px;
 }
 
 article.frase-main{
@@ -174,13 +176,14 @@ article.frase-main{
     flex-wrap: wrap;
 }
 .frase-main h2, .frase-main h3{
-    text-shadow: 1px 1px 30px var(--color-shadow);
+    text-shadow: 1px 1px 40px var(--color-shadow);
     color: var(--blanco);
     font-size: 18px;
-    padding: 0 10px;
 }
-.frase-main h3{
-    align-self: flex-end;
+.frase-1, .frase-2{
+    background-color: var(--color-dark);
+    padding: 2px 10px;
+    border-radius: 10px;
 }
 
 #language-1{grid-area:language1;}
@@ -196,12 +199,12 @@ article.frase-main{
 
 
 #language-1 img,#language-2 img,#language-3 img,#language-4 img, #language-5 img, #language-6 img{
-    width: 20px;
+    width: 40px;
     height: auto;
     padding-right: 8px;
 }
 #language-7 img, #language-8 img, #language-9 img, #language-10 img{
-    width: 20px;
+    width: 40px;
     height: auto;
     padding-right: 8px;
 }
@@ -234,6 +237,7 @@ article.frase-main{
     font-family: var(--font-other);
     font-weight: 800;
     text-align: center;
+    padding: 10px 0px;
 }
 
 .grid-language a:hover{
@@ -272,7 +276,7 @@ section#python-language-container, #java-language-container{
     color: var(--negro);
     font-size: 16px;
 }
-@media only screen and (max-width: 600px){
+@media screen and (max-width: 768px) {
     ul.menu-flex{
         display: none;
     }
@@ -282,6 +286,17 @@ section#python-language-container, #java-language-container{
     }
     .nav-icon-6{
         display: inline-block;
+    }
+}
+@media only screen and (max-width: 600px){
+    .frase-1, .frase-2{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    }
+    .frase-main h2, .frase-main h3{
+        text-align: center;
+        padding: 5px;
     }
 }
 
