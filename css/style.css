@@ -30,26 +30,22 @@ body{
 }
 /* Estilos header */
 header{
-    
     margin: auto;
-    position: sticky;
     padding-bottom: 10px;
     background-color: var(--negro);
-
 }
 
 nav.navigator{
     margin: 0px;
 }
-
 .direccion-logo{
     display: flex;
     justify-content: center;
 }
 
 .logo-page img{
-    width: 20%;
-    margin: 30px 0px 15px;  
+    width: 100px;
+    padding: 30px 0px 15px;  
 }
 
 ul.menu-flex{
@@ -68,23 +64,25 @@ ul.menu-flex{
     font-weight: 600;
     text-decoration:none;
     transition: border 0.6s ease;
-    padding: 1vw;
+    padding: 16px;
 }
 
 .menu-flex a:hover{
     border: 2px solid var(--hover-nav);
     cursor: pointer;
 }
+
 /* Estilos main */
 main{
-    width: 80%;
+    width: 85%;
     margin: auto;
     font-family: var(--font-primary);
     color: var(--blanco);
-    font-size: 1.4vw;
     background-color: var(--blanco);
 }
-
+main img{
+    width: 500px;
+}
 h1{
     text-shadow: 1px 1px 15px #0547aa;
     text-align: center;
@@ -92,13 +90,13 @@ h1{
     font-weight: 800;
     text-transform: uppercase;
     font-family: var(--font-primary);
-    font-size: 2vw;
+    font-size: 30px;
     text-decoration: dashed;
 }
 
 
 .face-smile-beam{
-    width: 1.5vw;
+    width: 20px;
     height: auto;
 }
 
@@ -107,21 +105,23 @@ h1{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin: 40px 0px;
+    margin: 20px 0px;
 }
 
 article.frase-main{
     display: flex;
     justify-content: space-evenly;
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
-.frase-1,.frase-2{
-    width: 50%;
+article.frase-main{
+    display: flex;
+    flex-wrap: wrap;
 }
 .frase-main h2, .frase-main h3{
     text-shadow: 1px 1px 30px var(--color-shadow);
     color: var(--blanco);
+    font-size: 18px;
 }
 .frase-main h3{
     align-self: flex-end;
@@ -140,12 +140,12 @@ article.frase-main{
 
 
 #language-1 img,#language-2 img,#language-3 img,#language-4 img, #language-5 img, #language-6 img{
-    width: 2.5vw;
+    width: 20px;
     height: auto;
     padding-right: 8px;
 }
 #language-7 img, #language-8 img, #language-9 img, #language-10 img{
-    width: 2.5vw;
+    width: 20px;
     height: auto;
     padding-right: 8px;
 }
@@ -193,7 +193,7 @@ article.frase-main{
 .introduccion-container p{
     color: black;
     font-weight: 700;
-    font-size: 1.5vw;
+    font-size: 20px;
     color: var(--color-dark);
 
 }
@@ -201,7 +201,7 @@ article.frase-main{
     font-weight: 500;
     font-style: italic;
     text-align: left;
-    font-size: 2vw;
+    font-size: 22px;
     border: 5px solid var(--negro);
     padding: 20px;
 }
@@ -214,9 +214,17 @@ article.frase-main{
 section#python-language-container, #java-language-container{
     width: 100%;
     color: var(--negro);
-    font-size: 1.1vw;
+    font-size: 16px;
 }
-
+@media only screen and (max-width: 600px){
+    ul.menu-flex{
+        display: none;
+    }
+    .grid-container-language{
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 /* Estilos footer */
 .footer-container{
@@ -234,7 +242,7 @@ section#python-language-container, #java-language-container{
 }
 .footer-container span{
     color: var(--negro);
-    font-size: 1.2vw;
+    font-size: 16px;
     font-family: var(--font-primary);
     padding-top: 15px;
     align-self: center;
@@ -248,6 +256,6 @@ section#python-language-container, #java-language-container{
     align-self: center;
 }
 .footer-container svg{
-    width: 2vw;
+    width: 20px;
     padding: 0 10px;
 }
