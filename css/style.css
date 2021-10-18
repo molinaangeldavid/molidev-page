@@ -9,6 +9,8 @@
     --color-shadow: #A2D2FF;
 }
 html{
+    margin: 0px;
+    padding: 0px;
     scroll-behavior: smooth;
     width: 100%;
 }
