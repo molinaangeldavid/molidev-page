@@ -1,9 +1,11 @@
 #sobre-mi-container-main{
-    width: 100%;
+    width: 90%;
     display: grid;
-    grid-template-rows: 1fr ;
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 200;
 }
+
 #retrato-molina{
-    width: 15vw;
+    width: 18vw;
     border-radius: 50%;
 }

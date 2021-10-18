@@ -5,13 +5,18 @@
     --hover-nav: rgba(44, 35, 35);
     --font-primary: 'Lora', serif;
     --font-other: 'Noto Sans Mono', monospace;
+    --color-link: #9705aa;
+    --color-shadow: #A2D2FF;
 }
 html{
     scroll-behavior: smooth;
     width: 100%;
 }
+p, h2, h3{
+    color: var(--negro);
+}
 a:visited, a:link{
-    color: #9705aa;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: 500;
 }
@@ -35,8 +40,6 @@ header{
 
 nav.navigator{
     margin: 0px;
-    justify-content: center;
-    align-items: center;
 }
 
 .direccion-logo{
@@ -83,12 +86,12 @@ main{
 }
 
 h1{
-    padding: 10px 0px;
+    text-shadow: 1px 1px 15px #0547aa;
     text-align: center;
+    padding: 10px 0px;
     font-weight: 800;
-    color: var(--blanco);
     text-transform: uppercase;
-    font-family: var(--font-other);
+    font-family: var(--font-primary);
     font-size: 2vw;
     text-decoration: dashed;
 }
@@ -117,7 +120,7 @@ article.frase-main{
     width: 50%;
 }
 .frase-main h2, .frase-main h3{
-    text-shadow: 1px 1px 30px #A2D2FF;
+    text-shadow: 1px 1px 30px var(--color-shadow);
     color: var(--blanco);
 }
 .frase-main h3{
@@ -134,15 +137,14 @@ article.frase-main{
 #language-8{grid-area:language8;}
 #language-9{grid-area:language9;}
 #language-10{grid-area:language10;}
-#language-11{grid-area:language11;}
-#language-12{grid-area:language12;}
+
 
 #language-1 img,#language-2 img,#language-3 img,#language-4 img, #language-5 img, #language-6 img{
     width: 2.5vw;
     height: auto;
     padding-right: 8px;
 }
-#language-7 img, #language-8 img, #language-9 img, #language-10 img, #language-11 img, #language-12 img{
+#language-7 img, #language-8 img, #language-9 img, #language-10 img{
     width: 2.5vw;
     height: auto;
     padding-right: 8px;
@@ -151,10 +153,10 @@ article.frase-main{
 .grid-container-language{
     display: grid;
     grid-template-areas: 
-    'language1 language1 language2 language2 language3 language3'
-    'language4 language4 language5 language5 language6 language6'
-    'language7 language7 language8 language8 language9 language9'
-    'language10 language10 language11 language11 language12 language12';
+    'language1 language1 language1 language1 language1 language1'
+    'language2 language2 language3 language3 language4 language4'
+    'language5 language5 language6 language6 language7 language7'
+    'language8 language8 language9 language9 language10 language10';
     margin: 0 10px;
     grid-column-gap: 10px;
 }
@@ -163,18 +165,19 @@ article.frase-main{
     display: flex;
     flex-direction: row;
     border-radius: 20px;
-    text-align: center;
     margin-bottom: 30px;
 }
 
 .grid-language a{
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--negro);
+    color: var(--color-dark);
     width: 100%;
     border: 3px solid rgb(5, 5, 5);
     transition: border 0.6s ease;
     font-family: var(--font-other);
+    font-weight: 800;
+    text-align: center;
 }
 
 .grid-language a:hover{
@@ -189,7 +192,6 @@ article.frase-main{
 }
 .introduccion-container p{
     color: black;
-    text-align: center;
     font-weight: 700;
     font-size: 1.5vw;
     color: var(--color-dark);
@@ -209,17 +211,17 @@ article.frase-main{
     color: var(--negro);
 }
 
-section#python-language-container{
+section#python-language-container, #java-language-container{
     width: 100%;
     color: var(--negro);
-    font-size: 0.9vw;
+    font-size: 1.1vw;
 }
 
 
 /* Estilos footer */
 .footer-container{
     width: 100%;
-    height: 8vw;
+    height: auto;
     margin-top: 50px;
     background-color: #A2D2FF;
 }
@@ -227,20 +229,23 @@ section#python-language-container{
     width: 80%;
     margin: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-}
-.footer-container .derechos-container{
-    display: inherit;
 }
 .footer-container span{
     color: var(--negro);
     font-size: 1.2vw;
     font-family: var(--font-primary);
     padding-top: 15px;
+    align-self: center;
 }
 .footer-container a, .footer-container li{
     text-decoration: none;
     list-style-type: none;
+    display: inline-block;
+}
+.footer-container a{
+    align-self: center;
 }
 .footer-container svg{
     width: 2vw;
