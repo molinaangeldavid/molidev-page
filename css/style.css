@@ -25,7 +25,7 @@ a:visited, a:link{
 body{
     color: var(--negro);
     font-family: var(--font-primary);
-    margin: auto;
+    margin: 0;
     padding: 0px;
     box-sizing: border-box;
     background-color: var(--blanco);
@@ -34,7 +34,8 @@ body{
 header{
     margin: auto;
     padding-bottom: 10px;
-    background-color: var(--negro);
+    /* background-color: #ce0875; */
+    background-color: #FF0075;
 }
 
 nav.navigator{
@@ -56,6 +57,9 @@ ul.menu-flex{
     transition: border 2s ease;
     padding-left: 0px;
     padding: 20px 0 20px 0;
+}
+ul.menu-flex li{
+    list-style-type: none;
 }
 
 .menu-flex a{
@@ -83,7 +87,7 @@ ul.menu-flex{
     display: none;
   }
   .nav-icon-6 span{
-    background-color:#fff;
+    background-color: var(--blanco);
     position: absolute;
     border-radius: 2px;
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
@@ -132,16 +136,14 @@ ul.menu-flex{
 
 /* Estilos main */
 main{
-    width: 85%;
+    width: 100%;
     margin: auto;
     font-family: var(--font-primary);
     color: var(--blanco);
     background-color: var(--blanco);
 }
-main img{
-    width: 500px;
-}
-h1{
+
+h1.titulo-container-principal{
     text-shadow: 1px 1px 15px #ffffff;
     text-align: center;
     padding: 10px 0px;
@@ -160,12 +162,14 @@ h1{
 }
 
 .introdution-main{
+    width: 85%;
     background-image: url(/images/imagen-header3.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    margin: 20px 0px;
+    margin: 20px auto;
     padding: 40px;
+    height: 200px;
 }
 
 article.frase-main{
@@ -212,13 +216,14 @@ article.frase-main{
 }
 
 .grid-container-language{
+    width: 85%;
     display: grid;
     grid-template-areas: 
     'language1 language1 language1 language1 language1 language1'
     'language2 language2 language3 language3 language4 language4'
     'language5 language5 language6 language6 language7 language7'
     'language8 language8 language9 language9 language10 language10';
-    margin: 0 10px;
+    margin: 0 auto;
     grid-column-gap: 10px;
 }
 
@@ -247,19 +252,20 @@ article.frase-main{
     border: 3px solid #0077a7;
 }
 
-.introduccion-container{
+
+.introdution-container{
+    width: 85%;
     font-family: var(--font-primary);
-    width: 100%;
-    margin: auto;
+    margin: 0 auto;
 }
-.introduccion-container p{
+.introdution-container p{
     color: black;
     font-weight: 700;
     font-size: 20px;
     color: var(--color-dark);
-
+    
 }
-.introduccion-container .intro-inspiracion{
+.introdution-container .intro-inspiracion{
     font-weight: 500;
     font-style: italic;
     text-align: left;
@@ -273,11 +279,41 @@ article.frase-main{
     color: var(--negro);
 }
 
-section#python-language-container, #java-language-container{
+#introdution-language-programming{
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--blanco);
+}
+
+.language-programming{
+    width: 85%;
+    margin: auto;
+}
+
+#python-language-container, #java-language-container, #javascript-language-container, #csharp-language-container, #cmasmas-language-container{
     width: 100%;
     color: var(--negro);
     font-size: 16px;
+    background-color: #FFEF78;
+    border-top: 4px solid #282b39;
 }
+#php-language-container, #visual-basic-language-container, #c-language-container, #go-language-container, #r-language-container{
+    width: 100%;
+    color: var(--negro);
+    font-size: 16px;
+    background-color: #FFEF78;
+    border-top: 4px solid #282b39;
+}
+.introdution-python, .introdution-java, .introdution-csharp, .introdution-cmasmas, .introdution-visual-basic, .introdution-php, .introdution-c, .introdution-r, .introdution-go, .introdution-javascript{
+    width: 85%;
+    margin: auto;
+    padding: 10px 3px;
+    
+}
+.introdution-r{
+    padding-bottom: 20px;
+}
+
 @media screen and (max-width: 768px) {
     ul.menu-flex{
         display: none;
@@ -303,11 +339,13 @@ section#python-language-container, #java-language-container{
 }
 
 /* Estilos footer */
+
 .footer-container{
+    bottom: 0;
     width: 100%;
     height: auto;
-    margin-top: 50px;
     background-color: #A2D2FF;
+    margin-bottom: 0px;
 }
 .sub-container{
     width: 80%;
