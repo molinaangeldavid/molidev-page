@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-contacto.css">
     <script src="https://kit.fontawesome.com/3016938de9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+
     <title>MOLINADEV - Web - Software - Python</title>
 </head> 
 <body>
@@ -33,9 +37,35 @@
     </header>
     <main id="contacto-container-main">
         <div class="titulo-container-contacto">
-            <h1 class="contacto"> Contacto</h1>
-            <h2 class="contacto">Cualquier consulta o duda, escribeme</h2>
+            <h1 class="contacto">Contacto</h1>
+            <h2 class="contacto">Contactate conmigo</h2>
         </div>
+        <section class="formulario-section">
+            <div class="formulario-container">
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label" style="color: black;">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <!-- <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1" style="color: black;">Check me out</label>
+                    </div> -->
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Si tenes alguna consulta que queres dejar, escribilo aca</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Tu sexo</option>
+                        <option value="1">Hombre</option>
+                        <option value="2">Mujer</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="footer-container">

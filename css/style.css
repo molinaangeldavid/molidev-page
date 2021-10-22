@@ -1,12 +1,13 @@
 :root{
     --blanco: #fff;
     --negro: rgb(20, 19, 19);
-    --color-dark: #282b39;
     --hover-nav: rgba(44, 35, 35);
     --font-primary: 'Lora', serif;
     --font-other: 'Noto Sans Mono', monospace;
     --color-link: #9705aa;
     --color-shadow: #A2D2FF;
+    --color-head: #FF0075;
+    --color-language-hover: #0077a7;
 }
 html{
     margin: 0px;
@@ -35,7 +36,7 @@ header{
     margin: auto;
     padding-bottom: 10px;
     /* background-color: #ce0875; */
-    background-color: #FF0075;
+    background-color: var(--color-head);
 }
 
 nav.navigator{
@@ -106,17 +107,7 @@ ul.menu-flex li{
     bottom:0px;
     left: 0px;
   }
-  .nav-icon-6:not(.open):hover span:nth-child(1){
-    transform:  scaleY(1.2);
-    left: -5px;
-  }
-  .nav-icon-6:not(.open):hover span:nth-child(2){
-    transform: rotate(5deg) scaleY(1.1);
-  }
-  .nav-icon-6:not(.open):hover span:nth-child(3){
-    transform:  scaleY(1.2);
-    left: 5px;
-  }
+
   .nav-icon-6.open span:nth-child(1){
     transform: rotate(45deg) scaleX(0.7);
     top: 13PX;
@@ -132,8 +123,6 @@ ul.menu-flex li{
     left: 7px;
   }
 
-
-
 /* Estilos main */
 main{
     width: 100%;
@@ -143,24 +132,6 @@ main{
     background-color: var(--blanco);
 }
 
-h1.titulo-container-principal{
-    text-shadow: 1px 1px 15px #ffffff;
-    text-align: center;
-    padding: 10px 0px;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-family: var(--font-primary);
-    font-size: 30px;
-    text-decoration: dashed;
-    color: var(--negro);
-}
-
-
-.face-smile-beam{
-    width: 20px;
-    height: auto;
-}
-
 .introdution-main{
     width: 85%;
     background-image: url(/images/imagen-header3.png);
@@ -168,28 +139,46 @@ h1.titulo-container-principal{
     background-attachment: fixed;
     background-size: cover;
     margin: 20px auto;
-    padding: 40px;
     height: 200px;
+    display: flex;
+    justify-content: center;
 }
 
-article.frase-main{
-    display: flex;
-    justify-content: space-evenly;
+h1.titulo-container-principal{
+    text-align: center;
+    font-weight: 800;
+    padding: 20px 0 0 0;
+    text-transform: uppercase;
+    font-family: var(--font-primary);
+    font-size: 30px;
+    text-decoration: dashed;
+    color: var(--blanco);
+}
+
+.face-smile-beam{
+    width: 20px;
+    height: auto;
 }
 
 article.frase-main{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.frase-main h2, .frase-main h3{
-    text-shadow: 1px 1px 40px var(--color-shadow);
+.frase-1{
+    text-shadow: 1px  0px 0px var(--blanco),
+    0px  1px 0px var(--blanco),
+    -1px  0px 0px var(--blanco),
+    0px -1px 0px var(--blanco);
     color: var(--blanco);
     font-size: 18px;
-}
-.frase-1, .frase-2{
-    background-color: var(--color-dark);
+    align-self: center;
     padding: 2px 10px;
     border-radius: 10px;
+}
+.frase-1 h3{
+    text-align: end;
 }
 
 #language-1{grid-area:language1;}
@@ -237,7 +226,7 @@ article.frase-main{
 .grid-language a{
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--negro);
     width: 100%;
     border: 3px solid rgb(5, 5, 5);
     transition: border 0.6s ease;
@@ -249,21 +238,19 @@ article.frase-main{
 
 .grid-language a:hover{
     cursor: pointer;
-    border: 3px solid #0077a7;
+    border: 3px solid var(--color-language-hover);
 }
-
 
 .introdution-container{
     width: 85%;
     font-family: var(--font-primary);
-    margin: 0 auto;
+    margin: 0 auto 20px;
+    
 }
 .introdution-container p{
     color: black;
     font-weight: 700;
     font-size: 20px;
-    color: var(--color-dark);
-    
 }
 .introdution-container .intro-inspiracion{
     font-weight: 500;
@@ -291,24 +278,26 @@ article.frase-main{
 }
 
 #python-language-container, #java-language-container, #javascript-language-container, #csharp-language-container, #cmasmas-language-container{
-    width: 100%;
+    width: 85%;
+    margin: auto;
     color: var(--negro);
     font-size: 16px;
     background-color: #FFEF78;
-    border-top: 4px solid #282b39;
+    padding: 20px;
 }
 #php-language-container, #visual-basic-language-container, #c-language-container, #go-language-container, #r-language-container{
-    width: 100%;
+    width: 85%;
+    margin: auto;
     color: var(--negro);
     font-size: 16px;
     background-color: #FFEF78;
-    border-top: 4px solid #282b39;
+    padding: 20px;
 }
 .introdution-python, .introdution-java, .introdution-csharp, .introdution-cmasmas, .introdution-visual-basic, .introdution-php, .introdution-c, .introdution-r, .introdution-go, .introdution-javascript{
     width: 85%;
     margin: auto;
     padding: 10px 3px;
-    
+
 }
 .introdution-r{
     padding-bottom: 20px;
@@ -325,6 +314,7 @@ article.frase-main{
     .nav-icon-6{
         display: inline-block;
     }
+
 }
 @media only screen and (max-width: 600px){
     .frase-1, .frase-2{
@@ -332,11 +322,49 @@ article.frase-main{
     display: flex;
     justify-content: center;
     }
-    .frase-main h2, .frase-main h3{
-        text-align: center;
-        padding: 5px;
-    }
+
+    /* ul.menu-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-content: space-around;
+    } */
 }
+
+/* Estilos boton de lenguajes */
+
+.accordion {
+    background-color: var(--blanco);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 25px;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    border: 2px solid var(--negro);
+    margin: auto;
+  }
+  
+  .accordion:after {
+    content: '\002B';
+    color: var(--negro);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2212";
+  }
+  
+  .panel {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
 
 /* Estilos footer */
 
@@ -344,7 +372,7 @@ article.frase-main{
     bottom: 0;
     width: 100%;
     height: auto;
-    background-color: #A2D2FF;
+    background-color: var(--color-shadow);
     margin-bottom: 0px;
 }
 .sub-container{
