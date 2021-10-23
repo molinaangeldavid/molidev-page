@@ -258,6 +258,10 @@ article.frase-main{
     
 }
 
+main li>span{
+    font-weight: 800;
+}
+
 .introdution-container p{
     color: black;
     font-weight: 700;
