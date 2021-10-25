@@ -1,0 +1,54 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+div{
+    border: 2px solid black;
+}
+
+head{
+    height: 150px;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: brown;
+}
+.nav-container li a{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.logo img{
+    width: 200px;
+    padding: 20px;
+}
+.openmenu{
+    display: none;
+}
+li{
+    list-style: none;
+    padding: 4px;
+    display: inline-block;
+}
+.openmenu i{
+    color: black;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.nav-responsive{
+    text-align: end;
+}
+.nav-responsive li{
+
+    display: block;
+}
+@media only screen and (max-width: 600px){
+    .menu{
+        display: none;
+    }
+    .openmenu{
+        display: inline-block   ;
+    }
+
+}
