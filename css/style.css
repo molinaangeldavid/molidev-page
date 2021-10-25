@@ -69,12 +69,13 @@ nav.navigator{
     font-size: 1rem;
     font-weight: 600;
     text-decoration:none;
-    transition: border 0.6s ease;
+    transition: background-color 1s ease;
     padding: 20px;
 }
 
 .menu-flex a:hover{
-    background-color: var(--hover-nav);
+    background-color: var(--blanco);
+    color: var(--negro);
     cursor: pointer;
 }
 
@@ -100,31 +101,34 @@ main{
 }
 
 .introdution-main{
-    width: 85%;
-    background-image: url(/images/imagen-header3.png);
+    width: 100%;
+    height: 50vh;
+    background-image: url(/images/fondo-main.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 20px auto;
-    height: 200px;
-    display: flex;
-    justify-content: center;
+    background-size: 100vw;
+    margin: 0 0 20px 0;
 }
 
 h1.titulo-container-principal{
-    text-align: center;
-    font-weight: 800;
-    padding: 20px 0 0 0;
+    padding-top: 150px;
+    font-weight: 400;
+    padding-left: 10vw;
     text-transform: uppercase;
     font-family: var(--font-primary);
-    font-size: 30px;
+    font-size: 1.8rem;
     text-decoration: dashed;
-    color: var(--blanco);
+    color: var(--negro);
+    text-shadow: 1px  0px 0px white,
+    0px  1px 0px white,
+   -1px  0px 0px white,
+    0px -1px 0px white;
 }
 
 .face-smile-beam{
-    width: 20px;
+    width: 30px;
     height: auto;
+    color: white;
+    margin-left: 10px;
 }
 
 article.frase-main{
@@ -295,7 +299,7 @@ main li>span{
         justify-content: center;
         align-items: center;
         background-color: var(--color-head);
-        /* transition: top 1s ease; */
+        transition: top 1s ease;
         display: none;
     }
      
@@ -309,6 +313,15 @@ main li>span{
         display: block;
     }
 
+    .introdution-main{
+        background-repeat: no-repeat;
+    }
+
+    h1.titulo-container-principal{
+        padding-top: 125px;
+        font-size: 1.5rem;
+    }
+
     .grid-container-language{
         display: flex;
         flex-direction: column;
@@ -316,19 +329,21 @@ main li>span{
 
 }
 @media only screen and (max-width: 600px){
-    .frase-1, .frase-2{
+    .frase-1{
     width: 80%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     }
 
-    /* ul.menu-flex{
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-content: space-around;
-    } */
+    .introdution-main{
+        background-size: cover;
+        background-position-x: 40%;
+    }
+
 }
+
+
 
 /* Estilos boton de lenguajes */
 /* ------------------------------------------------------------------ */

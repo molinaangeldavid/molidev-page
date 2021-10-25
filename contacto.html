@@ -12,55 +12,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
-
-    <title>MOLINADEV - Web - Software - Python</title>
+    <title>MOLINADEV - PORTOFOLIO</title> 
 </head> 
 <body>
-    <header>
-        <nav class="navigator">
-            <div class="logo-page">
-                <a class="direccion-logo" href="index.html"><img src="/images/logo_white_large.png" alt="logo"></a>
-            </div>
-            <div class="openMenu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="menu-flex">
-                <li class="inicio"><a href="index.html">inicio</a></li>
-                <li class="sobre-mi"><a href="sobre-mi.html">sobre mí</a></li>
-                <li class="proyectos"><a href="portfolio.html">mis proyectos</a></li>
-                <li class="contacto"><a href="contacto.html">contacto</a></li>
-                <div class="closeMenu"><i class="fas fa-angle-down"></i></div>
-            </ul>
-        </nav>
-    </header>
-    
+    <body>
+        <header>
+            <nav class="navigator">
+                <div class="logo-page">
+                    <a class="direccion-logo" href="index.html"><img src="/images/logo_white_large.png" alt="logo"></a>
+                </div>
+                <div class="openMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="menu-flex">
+                    <li class="inicio"><a href="index.html">inicio</a></li>
+                    <li class="sobre-mi"><a href="sobre-mi.html">sobre mí</a></li>
+                    <li class="proyectos"><a href="portfolio.html">proyectos</a></li>
+                    <li class="contacto"><a href="contacto.html">contacto</a></li>
+                    <div class="closeMenu"><i class="fas fa-angle-down"></i></div>
+                </ul>
+            </nav>
+        </header>
+
     <main id="contacto-container-main">
         <div class="titulo-container-contacto">
             <h1 class="contacto">Contacto</h1>
-            <h2 class="contacto">Contactate conmigo</h2>
+            <h2 class="contacto">Si tienes una opinion, encontraste una falla o tienes ideas para el sitio. Enviame tu mensaje.</h2>
         </div>
         <section class="formulario-section">
             <div class="formulario-container">
-                <form>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label" style="color: black;">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <form action="">
+                    <div>
+
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" placeholder="Tu nombre">
+                   
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" placeholder="Tu apellido">
                     </div>
-                    <!-- <div class="mb-3 form-check">
-                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                      <label class="form-check-label" for="exampleCheck1" style="color: black;">Check me out</label>
-                    </div> -->
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label" style="color: black;">Si tenes alguna consulta que queres dejar, escribilo aca</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email">
+
+                        <label for="telefono">Telefono</label>
+                        <input type="tel" name="telefono" placeholder="Cod ciudad + numero">
                     </div>
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                        <option selected>Tu sexo</option>
-                        <option value="1">Hombre</option>
-                        <option value="2">Mujer</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                    <div>
+                        <textarea name="comentario" id="" cols="30" rows="10" placeholder="Ingresa tu comentario aqui"></textarea>
+                        <option value=""></option>
+                    </div>
+
+
                 </form>
             </div>
         </section>

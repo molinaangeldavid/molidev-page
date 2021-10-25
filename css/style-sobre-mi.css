@@ -1,6 +1,6 @@
 
 #sobre-mi-container-main{
-    max-height: 100%;
+    width: 100%;
     display: grid;
     font-family: 'Noto Sans Mono', monospace;
     font-weight: 200;
@@ -19,8 +19,8 @@
 }
 
 #retrato-molina-container{
-    margin-right: 60px;
     display: flex;
+    margin-right: 60px;
 }
 
 #retrato-molina{
@@ -43,32 +43,47 @@
     font-weight: 700;
 }
 
-div.titulo-container-sobre-mi{
+.titulo-container-sobre-mi{
     background-image: url(/images/fondo-sobre-mi.jpg);
-    background-position-y: 63%;
-    padding: 200px 10px;
-    text-align: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    background-position-y: 58%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
 }
-h1.sobre-mi,h2.sobre-mi{
+#sobre-mi-container-main h1, #sobre-mi-container-main h2.sobre-mi{
     color: rgb(218, 218, 218);
-    font-size: 25px;
+    font-size: 2rem;
     text-align: left;
-    padding-left: 20%;
-    font-weight: 600;
+    padding-left: 10vw;
+    font-weight: 400;
     letter-spacing: 5px;
     text-shadow: 1px  0px 0px black,
     0px  1px 0px black,
    -1px  0px 0px black,
     0px -1px 0px black;
 }
+
+#sobre-mi-container-main h2{
+    font-size: 1.5rem;
+}
+
 h1.sobre-mi{
-    font-size: 40px;
     border-bottom: 2px solid black;
     display: inline-block;
+    padding-top: 150px;
+}
+
+#presentation-personal h2{
+    padding-left: 0px;
+    font-weight: 500;
 }
 
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 768px){
     .grid-container-main{
         grid-template-areas: 
         'image'
@@ -78,7 +93,20 @@ h1.sobre-mi{
         display: flex;
         justify-self: center
     }
-    div.titulo-container-sobre-mi{
-        background-position-x: 35%;
+
+    h1.sobre-mi{
+        padding-top: 10px;
+    }
+
+    .titulo-container-sobre-mi{
+        height: 50vh
     }
 };
+
+@media screen and ( max-width: 600px ){
+
+    #sobre-mi-container-main .titulo-container-sobre-mi{
+        background-position-x: 50%;
+    }
+
+}
