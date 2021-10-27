@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <link rel="shortcut icon" href="/favicon_io/favicon.ico" type="image/x-icon">
+    <script src="/js/validation-contact.js"></script>
     <title>MOLINADEV - PORTOFOLIO</title> 
 </head> 
 <body>
@@ -36,37 +37,61 @@
 
     <main id="contacto-container-main">
         <div class="titulo-container-contacto">
-            <h1 class="contacto">Contacto</h1>
-            <h2 class="contacto">Si tienes una opinion, encontraste una falla o tienes ideas para el sitio. Enviame tu mensaje.</h2>
+            <h1 class="titulo-container-principal contacto">Contacto</h1>
+            <h2 class="subtitulo-container-principal contacto">Si tienes una opinion, encontraste una falla o tienes ideas para el sitio. Enviame tu mensaje.</h2>
+        </div>
+        <div class="contacto-mensajes-presentacion">
+            <p>Si querer darme un/os consejo/s o sugerencia/s; viste algun problema o error en el sitio; contarme de tu experiencia o hablar de negocios, por favor rellena el campo de aqui abajo en caso que sea breve </p>
+            <p>Si es un mensaje extenso por favor enviame un mensaje a <a href="https://www.gmail.com"></a>molina.angeldavid@gmail.com o a cualquiera de mis redes</p>
+        </div>
+        <div class="banner-social-media">
+            <h3>Mis redes sociales</h3>
+            <div>
+                <a href="https://www.instagram.com/everest0202/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/david-molina-029803197/"><i class="fab fa-linkedin"></i></a> 
+                <a href="https://molinaangeldavid.blogspot.com/"><i class="fab fa-blogger"></i></a> 
+                <a href="https://github.com/molinaangeldavid"><i class="fab fa-github"></i></a> 
+            </div>
+        </div>
+        
         </div>
         <section class="formulario-section">
-            <div class="formulario-container">
-                <form action="">
-                    <div>
-
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" placeholder="Tu nombre">
-                   
-                        <label for="apellido">Apellido</label>
-                        <input type="text" name="apellido" placeholder="Tu apellido">
-                    </div>
-
-                    <div>
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email">
-
-                        <label for="telefono">Telefono</label>
-                        <input type="tel" name="telefono" placeholder="Cod ciudad + numero">
-                    </div>
-
-                    <div>
-                        <textarea name="comentario" id="" cols="30" rows="10" placeholder="Ingresa tu comentario aqui"></textarea>
-                        <option value=""></option>
-                    </div>
-
-
-                </form>
-            </div>
+            <form action="" class="grid-container-form">
+                <div class="flex-container-form" id="grid-container-nombre">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre">
+                    <p class="mensaje-input-nombre">!! Ingresar solamente letras.</p>
+                </div>
+                <div class="flex-container-form" id="grid-container-apellido">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" placeholder="Tu apellido">
+                    <p class="mensaje-input-nombre">!! Ingresar solamente letras.</p>
+                </div>
+                <div class="flex-container-form" id="grid-container-edad">
+                    <label for="edad">Edad</label>
+                    <input type="text" name="edad" placeholder="Tu edad">
+                    <p class="mensaje-input-edad">!! Ingresar solamente numero hasta un maximo de 2 cifras.</p>
+                </div>
+                <div class="flex-container-form" id="grid-container-email">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email"placeholder="Tu correo electronico">
+                    <p class="mensaje-input-email">!! Ingresar un correo valido</p>
+                </div>
+                <div class="flex-container-form" id="grid-container-telefono">
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" name="telefono" placeholder="Cod ciudad + numero">
+                    <p class="mensaje-input-telefono">!! Ingresar solamente numeros y un maximo de 20 cifras</p>
+                </div>
+                <div class="flex-container-form" id="grid-container-comment" >
+                    <label for="comentario">Comentarios</label>
+                    <textarea name="comentario"  rows="10" cols="30" placeholder="Ingresa tu comentario aqui"></textarea>
+                    <p class="mensaje-input-comentario">Ingresar solamente hasta un maximo de 150 caracteres</p>
+                </div>
+                <div class="flex-container-form" id="grid-container-btn">
+                    <button type="submit">Enviar</button>
+                    <p class="mensaje-btn-exito">El mensaje se ha enviado exitosamente!!</p>
+                </div>
+            </form>
         </section>
     </main>
 

@@ -107,21 +107,27 @@ main{
     background-repeat: no-repeat;
     background-size: 100vw;
     margin: 0 0 20px 0;
+    text-align: left;
+    display: inline-block;
 }
-
 h1.titulo-container-principal{
     padding-top: 150px;
-    font-weight: 400;
+    font-size: 40px;
+    border-bottom: 5px solid #fff;
+    display: inline-block;
+}
+
+.titulo-container-principal, .subtitulo-container-principal{
+    font-weight: 600;
+    letter-spacing: 5px;
     padding-left: 10vw;
-    text-transform: uppercase;
+    color: var(--blanco);
+    text-shadow: 1px  0px 0px black,
+    0px  1px 0px black,
+   -1px  0px 0px black,
+    0px -1px 0px black;
+    font-size: 1.4rem;
     font-family: var(--font-primary);
-    font-size: 1.8rem;
-    text-decoration: dashed;
-    color: var(--negro);
-    text-shadow: 1px  0px 0px white,
-    0px  1px 0px white,
-   -1px  0px 0px white,
-    0px -1px 0px white;
 }
 
 .face-smile-beam{
@@ -318,7 +324,7 @@ main li>span{
     }
 
     h1.titulo-container-principal{
-        padding-top: 125px;
+        padding-top: 20px;
         font-size: 1.5rem;
     }
 
@@ -338,7 +344,10 @@ main li>span{
 
     .introdution-main{
         background-size: cover;
-        background-position-x: 40%;
+    }
+
+    h1.titulo-container-principal{
+        padding-top: 20px;
     }
 
 }
