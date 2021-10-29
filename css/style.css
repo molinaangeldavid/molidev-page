@@ -429,3 +429,10 @@ main li>span{
     width: 20px;
     padding: 0 10px;
 }
+
+.fa-instagram:hover, 
+.fa-linkedin:hover,
+.fa-blogger:hover,
+.fa-github:hover{
+    color: rgb(40, 218, 218);
+}

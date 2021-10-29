@@ -28,6 +28,52 @@ h2.subtitulo-container-pricipal, .portfolio{
     margin: auto;
 }
 
+.card-containers-trabajos{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.card-containers-trabajos a{
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 2px;
+    width: 20%;
+    display: block;
+    border: 2px solid #000;
+    margin: 20px 0px;
+    background-color: transparent;
+    transition: width .6s ease-in-out;
+}
+
+.card-containers-trabajos a:hover{
+    width: 60%;
+}
+
+#card1-work, #card2-work{
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(216, 175, 175);
+    border-radius: 20px;
+    transition: background-color .8s ease-in;
+}
+
+#card1-work:hover, #card2-work:hover{
+    background-color:rgb(74, 190, 29)
+}
+
+#card1-work img,#card2-work img{
+    width: 50vw;
+}
+
+
+
 @media only screen and (max-width: 768px){
     div.titulo-container-portfolio{
         background-size: 800px;
@@ -35,6 +81,14 @@ h2.subtitulo-container-pricipal, .portfolio{
 
     h1.portfolio{
         padding-top: 20px;
+    }
+
+    .card-containers-trabajos a{
+        width: 50%;
+    }
+
+    #card1-work img,#card2-work img{
+        width: 100%;
     }
 
 }

@@ -30,13 +30,19 @@ h2.contacto{
 }
 
 .contacto-mensajes-presentacion{
-    margin: 0px;
+    width: 100%;
     background-color: rgb(221, 239, 255);
 }
 .contacto-mensajes-presentacion p{
-    margin: 0;
+    font-family: monospace;
+    width: 80%;
+    margin: 0 0;
     padding: 50px 40px;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+#correo-electronico-personal{
+    color: rgb(124, 5, 5);
 }
 
 .banner-social-media{
@@ -47,17 +53,23 @@ h2.contacto{
     background-color: #e4e01a;
 }
 .banner-social-media h3{
-    font-size: 1.5rem;
+    font-size: 20px;
     font-family: monospace;
     margin-left: 40px;
 }
 
-.banner-social-media i{
+.banner-social-media a{
     color: #000;
-    font-size: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
+    font-size: 30px;
+    margin: 0 15px;
+    padding: 10px;
+}
 
+.fa-instagram:hover, 
+.fa-linkedin:hover,
+.fa-blogger:hover,
+.fa-github:hover{
+    color: rgb(40, 218, 218);
 }
 
 .grid-container-form{
@@ -83,22 +95,15 @@ h2.contacto{
 }
 
 .flex-container-form input{
-    margin-right: 20px;
     height: 30px;
-    border: 1px solid #000;
     padding: 4px 10px;
     border: none;
-}
-
-.flex-container-form input:hover{
-    outline: 5px solid rgb(182, 197, 230);
-    border: none;
+    border: 1px solid #00b339;
 }
 
 .flex-container-form input:focus{
-    outline: 5px solid rgb(182, 197, 230);
-    border: none;
-}
+    outline: 5px solid #00b339;
+};
 
 #grid-container-2{
     flex-direction: column;
@@ -124,34 +129,58 @@ h2.contacto{
 }
 
 #grid-container-btn{
-    padding: 8px;
     grid-column: span 2;
     width: 100%;
 }
 
 #grid-container-btn button{
     width: 100%;
-    height: 40px;
     background-color: rgb(85, 212, 12);
     color: #fff;
     font-weight: 700;
     font-size: 1.2rem;
-    padding: 10px 0;
+    padding: 15px 0;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.mensaje-btn-exito{
-    display: none;
-
+.flex-container-form-incorrecto .formulario_label{
+    color: #e20f08;
+}
+.flex-container-form-correcto .formulario_label{
+    color: #00b339;
 }
 
-.formulario-section p{
+.flex-container-form-incorrecto .formulario_input{
+    outline: 5px solid #e20f08;
+    border: 1px solid #e20f08;
+}
+
+.flex-container-form-incorrecto .formulario_input:focus{
+    outline: 5px solid #e20f08;
+}
+
+.mensaje-exito-envio .mensaje-btn-exito{
+    display: block;
+    text-align: center;
+}
+
+.formulario-section .mensaje-campo{
     font-size: 1rem;
-    background-color: #e0dd02;
-    padding: 5px 10px;
+    color: #000;
+    font-weight: bold;
     width: 70%;
     display: none;
+}
+
+.mensaje-btn-exito{
+    display: none;
+}
+
+
+
+.formulario__input-error .mensaje-campo{
+    display: block;
 }
 
 #grid-container-comment{
@@ -165,7 +194,7 @@ h2.contacto{
 
 
 
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 768px){
 
     h1.contacto{
         padding-top: 20px;
@@ -176,17 +205,28 @@ h2.contacto{
 }
 
 @media only screen and (max-width: 600px){
-
-    .titulo-container-portfolio{
-        background-position-x: cover;
-    }
-
-    .container-input{
-        justify-content: space-evenly;
-    }
-
+    
     .grid-container-form{
         grid-template-columns: 1fr;
+    }
+
+    #grid-container-btn{
+        grid-column: span 1;
+    }
+
+    #grid-container-comment{
+        grid-column: span 1;
+    }
+
+    .banner-social-media a{
+        color: #000;
+        font-size: 25px;
+        padding: 10px;
+        display: inline-block
+    }
+
+    .contacto-mensajes-presentacion p{
+        justify-content: flex-start
     }
 
 };
