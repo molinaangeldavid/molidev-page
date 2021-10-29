@@ -95,6 +95,7 @@ h2.contacto{
 }
 
 .flex-container-form input{
+    width: 80%;
     height: 30px;
     padding: 4px 10px;
     border: none;

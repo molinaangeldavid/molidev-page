@@ -2,14 +2,13 @@ const formulario = document.getElementById('formulario-container');
 const inputs = document.querySelectorAll('#formulario-container input');
 
 const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ]{1,20}$/, // Letras, pueden llevar acentos.
+	nombre: /^[a-zA-ZÀ-ÿ]{2,20}$/, // Letras, pueden llevar acentos.
 	apellido: /^[a-zA-ZÀ-ÿ]{1,20}$/, // Letras, pueden llevar acentos.
 	edad: /^\d{1,2}$/, // 7 a 14 numeros
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, //nombre.apellido2@gmail.com
 	telefono: /^\d{7,15}$/, // 7 a 14 numeros. 
-	comentarios: /^\w{2,150}$/ // 2 a 150 caracteres. 
+	comentarios: /^[a-zA-Z0-9\s]{10,150}$/ // 2 a 150 caracteres. 
 } 
-
 const validarFormulario = (e) => {
     switch(e.target.name){
         case "nombre":
