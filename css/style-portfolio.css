@@ -1,3 +1,9 @@
+:root{
+    --color-negro-portfolio: rgb(20, 19, 19);
+    --color-blanco-portfolio: #fff;
+    --color-fondo-container-cards: rgb(216, 175, 175);
+    --color-hover-container-cards: rgb(74, 190, 29);
+}
 
 #portfolio-container-main{
     max-height: 100%;
@@ -16,11 +22,11 @@
 }
 
 h2.subtitulo-container-pricipal, .portfolio{
-    color: #000;
-    text-shadow: 1px  0px 0px #fff,
-    0px  1px 0px #fff,
-   -1px  0px 0px #fff,
-    0px -1px 0px #fff;
+    color: var(--color-negro-portfolio);
+    text-shadow: 1px  0px 0px var(--color-blanco-portfolio),
+    0px  1px 0px var(--color-blanco-portfolio),
+   -1px  0px 0px var(--color-blanco-portfolio),
+    0px -1px 0px var(--color-blanco-portfolio);
 }
 
 .section-trabajos{
@@ -39,14 +45,15 @@ h2.subtitulo-container-pricipal, .portfolio{
     font-size: 20px;
     font-family: monospace;
     text-align: center;
-    color: #000;
+    color: var(--color-negro-portfolio);
     text-decoration: none;
     padding: 8px 2px;
     width: 20%;
     display: block;
-    border: 2px solid #000;
+    border: 2px solid var(--color-negro-portfolio);
     margin: 20px 0px;
     background-color: transparent;
+    /* transicion de enlace en tamaño de ancho */
     transition: width .6s ease-in-out;
 }
 
@@ -55,17 +62,18 @@ h2.subtitulo-container-pricipal, .portfolio{
 }
 
 #card1-work, #card2-work{
+    cursor: pointer;
     padding: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(216, 175, 175);
+    background-color: var(--color-fondo-container-cards);
     border-radius: 20px;
     transition: background-color .8s ease-in;
 }
 
 #card1-work:hover, #card2-work:hover{
-    background-color:rgb(74, 190, 29)
+    background-color:var(--color-hover-container-cards);
 }
 
 #card1-work img,#card2-work img{
@@ -87,18 +95,24 @@ h2.subtitulo-container-pricipal, .portfolio{
         width: 50%;
     }
 
-    #card1-work img,#card2-work img{
-        width: 100%;
-    }
-
 }
 
 
-@media only screen and (min-width: 600px){
+@media only screen and (max-width: 600px){
 
     div.titulo-container-portfolio{
         background-position-x: 45%;
         background-position-y: 10%;
         background-size: 970px;
     }
+
+    #card1-work, #card2-work{
+        padding: 10px;
+    }
+
+    #card1-work img,#card2-work img{
+        width: 100vw;
+    }
+    
+
 };

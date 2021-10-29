@@ -8,6 +8,8 @@
     --color-shadow: #A2D2FF;
     --color-head: #4d3bf1;
     --color-language-hover: #0077a7;
+    --color-expl-lenguaje: #FFEF78;
+    --color-hover-social: rgb(40, 218, 218);
 }
 html{
     margin: 0px;
@@ -113,7 +115,7 @@ main{
 h1.titulo-container-principal{
     padding-top: 150px;
     font-size: 40px;
-    border-bottom: 5px solid #fff;
+    border-bottom: 5px solid var(--blanco);
     display: inline-block;
 }
 
@@ -122,10 +124,10 @@ h1.titulo-container-principal{
     letter-spacing: 5px;
     padding-left: 10vw;
     color: var(--blanco);
-    text-shadow: 1px  0px 0px black,
-    0px  1px 0px black,
-   -1px  0px 0px black,
-    0px -1px 0px black;
+    text-shadow: 1px  0px 0px var(--negro),
+    0px  1px 0px var(--negro),
+   -1px  0px 0px var(--negro),
+    0px -1px 0px var(--negro);
     font-size: 1.4rem;
     font-family: var(--font-primary);
 }
@@ -207,7 +209,7 @@ article.frase-main{
     text-decoration: none;
     color: var(--negro);
     width: 100%;
-    border: 3px solid rgb(5, 5, 5);
+    border: 3px solid var(--negro);
     transition: border 0.6s ease;
     font-family: var(--font-other);
     font-weight: 800;
@@ -267,7 +269,7 @@ main li>span{
     margin: auto;
     color: var(--negro);
     font-size: 16px;
-    background-color: #FFEF78;
+    background-color: var(--color-expl-lenguaje);
     padding: 20px;
 }
 
@@ -276,7 +278,7 @@ main li>span{
     margin: auto;
     color: var(--negro);
     font-size: 16px;
-    background-color: #FFEF78;
+    background-color: var(--color-expl-lenguaje);
     padding: 20px;
 }
 
@@ -434,5 +436,5 @@ main li>span{
 .fa-linkedin:hover,
 .fa-blogger:hover,
 .fa-github:hover{
-    color: rgb(40, 218, 218);
+    color: var(--color-hover-social);
 }

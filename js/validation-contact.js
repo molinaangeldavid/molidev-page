@@ -48,4 +48,7 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);
 });
 
-document.getElementById('')
+document.getElementById('mensaje-btn-exito').classList.add('mensaje-exito-envio');
+		setTimeout(() => {
+			document.getElementById('mensaje-btn-exito').classList.remove('mensaje-exito-envio');
+		}, 5000);

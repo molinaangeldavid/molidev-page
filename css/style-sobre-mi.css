@@ -1,4 +1,6 @@
-
+:root{
+    --color-nombre-presentacion: #e03805;
+}
 #sobre-mi-container-main{
     width: 100%;
     font-family: 'Noto Sans Mono', monospace;
@@ -36,7 +38,7 @@
 
 #presentation-personal h2>span{
     font-size: 1.8rem;
-    color: #e03805;
+    color: var(--color-nombre-presentacion);
     font-family: monospace;
     text-transform: uppercase;
     font-weight: 700;
